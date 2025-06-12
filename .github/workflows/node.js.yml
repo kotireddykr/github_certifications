@@ -24,6 +24,14 @@ jobs:
       uses: ./.github/actions/my-composite-action
       with:
         node-version: '18'
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Run my local action
+      uses: ./.github/actions/my-composite-action
+      with:
+        node-version: '18'
+
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
