@@ -13,16 +13,13 @@ outputs:
 runs:
   using: "composite"
   steps:
+
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
     - id: run-script
       run: echo "result=Success" >> $GITHUB_OUTPUT
       shell: bash
-  
-
-runs:
-  using: "composite"
-  steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
 
     - name: Set up Node.js
       uses: actions/setup-node@v4
