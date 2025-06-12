@@ -20,10 +20,6 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - name: Use my composite action
-      uses: ./.github/actions/my-composite-action
-      with:
-        node-version: '18'
     - name: Checkout repository
       uses: actions/checkout@v4
 
